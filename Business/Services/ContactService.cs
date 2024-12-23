@@ -2,7 +2,6 @@
 using Business.Interfaces;
 using Business.Models;
 using System.Diagnostics;
-using System.Text.Json;
 
 namespace Business.Services;
 
@@ -30,7 +29,8 @@ public class ContactService(IContactRepository contactRepository) : IContactServ
 
     public IEnumerable<Contact> GetAllContacts()
     {
-        throw new NotImplementedException();
+        _contacts = _contactRepository.GetContactsFromFile();
+        return _contacts;
     }
 
     // VG kriterier
