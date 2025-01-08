@@ -32,20 +32,4 @@ public class ContactService(IContactRepository contactRepository) : IContactServ
         _contacts = _contactRepository.GetContactsFromFile();
         return _contacts;
     }
-
-    // VG kriterier
-    public Contact GetContactById(Func<Contact, bool> predicate)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool UpdateContact(Func<Contact, bool> predicate, Contact updatedContact)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool DeleteContact(Func<Contact, bool> predicate)
-    {
-        throw new NotImplementedException();
-    }
 }
